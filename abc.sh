@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 # set -ex
 # common variables
-PORT1=$PORT
-TASK=$JOB_NAME
-REPOSITORY_URI=$AWS_ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$TASK
-echo $JOB_NAME
-echo $PORT1
-echo $REPOSITORY_URI
+PORT1=${env.PORT}
+TASK=${env.JOB_NAME}
+REPOSITORY_URI=${env.AWS_ACCOUNT_ID}.dkr.ecr.${env.REGION}.amazonaws.com/${env.TASK}
+echo ${PORT1}
+echo ${REPOSITORY_URI}
